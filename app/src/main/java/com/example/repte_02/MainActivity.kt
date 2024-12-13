@@ -12,22 +12,27 @@ import androidx.compose.material3.Surface
 import com.example.repte_02.View.EntryPoint
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.activity.viewModels
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
+import com.example.repte_02.ViewModel.NombreViewModel
 import com.example.repte_02.ui.theme.Repte_02Theme
 
 class MainActivity : ComponentActivity() {
+
+    val nombreController:NombreViewModel by viewModels<NombreViewModel>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             Repte_02Theme {
                 Surface (
                     color = MaterialTheme.colorScheme.background
                 ){
                     val navigationController = rememberNavController()
-                    EntryPoint(navigationController)
+                    EntryPoint(navigationController, nombreController)
                 }
             }
         }

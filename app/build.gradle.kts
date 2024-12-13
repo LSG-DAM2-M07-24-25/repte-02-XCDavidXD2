@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.repte_02"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.repte_02"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -65,6 +65,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.androidx.foundation.android)
     implementation(libs.androidx.ui.test.android)
+    implementation(libs.androidx.runtime.livedata)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

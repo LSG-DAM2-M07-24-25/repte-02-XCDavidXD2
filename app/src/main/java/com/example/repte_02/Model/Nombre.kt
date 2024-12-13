@@ -1,4 +1,5 @@
 package com.example.repte_02.Model
 
-class Nombre {
-}
+data class Nombre (
+    var nombre: String
+)
